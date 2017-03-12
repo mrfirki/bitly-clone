@@ -1,0 +1,32 @@
+.head {
+	text-align: center;
+	font-family: 'Baloo Bhaina', cursive;
+	color: white;
+}
+
+body {
+	background: url('../img/background3.png') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+#label {
+	color: white;
+	font-family: 'Baloo Bhaina', cursive;
+}
+
+#header-table {
+	color: white;
+}
+
+#url {
+	color: white;
+}
