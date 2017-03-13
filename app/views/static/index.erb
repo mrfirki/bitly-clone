@@ -11,7 +11,7 @@
 			</div>
 			<div class="row" >
 			  <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
-			    <form action="/urls" method="post">
+			    <form id="url-form" action="/urls" method="post">
 			      <div class="form-group">
 			        <h4 id="label" for="long_url"> Enter Url Here:</h4>
 			        <input type="text" id="long_url" name="long_url" class="form-control" placeholder="Please enter URL">
@@ -22,23 +22,23 @@
 			    </form>
 			  </div>
 			</div>
- 				
+ 			<div id="ajax-show"></div>
  			</div>
  			<div class="table-responsive">
  				<table class="table">
 				    <thead>
 				      <tr>
 				      	<th id="header-table">No.</th>
-				        <th id="header-table">Short Link</th>
 				        <th id="header-table">Site</th>
+				        <th id="header-table">Short Link</th>
 				        <th id="header-table">Visit count</th>
 				      </tr>
 				    </thead>
 				    <% @urls.each_with_index do |url, index|%>
 						<tr class="tr-content">
 							<td id="url"><%= index + 1 %>.</td>
-							<td><a id="url" href="http://localhost:9393/<%= url.short_url%>" target="_blank">http://Fikri.ly/<%= url.short_url%></a></td>
 							<td id="url"><%= url.long_url%></td>
+							<td><a id="url" href="http://localhost:9393/<%= url.short_url%>" target="_blank">http://Fikri.ly/<%= url.short_url%></a></td>
 							<td id="url"><%= url.counter%></td>
 						</tr>
 					<%end%>
